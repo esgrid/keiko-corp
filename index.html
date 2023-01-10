@@ -13,16 +13,16 @@
 	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 
+	<!-- added defer to these scripts -->
+	<script type="text/javascript" src="js/jquery.js" defer></script>
+	<script type="text/javascript" src="js/ajaxchimp.js" defer></script>
 
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/ajaxchimp.js"></script>
-
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="js/wow.js"></script>
-	<script type="text/javascript" src="js/parallax.js"></script>
-	<script type="text/javascript" src="js/nicescroll.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/scrollTo.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js" defer></script>
+	<script type="text/javascript" src="js/wow.js" defer></script>
+	<script type="text/javascript" src="js/parallax.js" defer></script>
+	<script type="text/javascript" src="js/nicescroll.js" defer></script>
+	<script type="text/javascript" src="js/main.js" defer></script>
+	<script type="text/javascript" src="js/scrollTo.js" defer></script>
 </head>
 <body>
 	<!--  Header Section -->
@@ -158,8 +158,25 @@
 	</section>
 	<!--  End About Section  -->
 
+<!-- to add stylesheet only when it is needed -->
+	<!-- <script type="text/javascript">
+		function loadStyleSheet(src){
+			// this is to account for IE
+			if (document.createStylesheet){
+				document.createStylesheet(src)
+			} else {
+				const stylesheet = document.createElement('link')
+				stylesheet.href = src
+				stylesheet.type = 'text/css'
+				stylesheet.rel = 'stylesheet'
+				document.getElementsByTagName('head')[0].appendChild(stylesheet)
+			}
+		}
 
-
+		window.onload = function(){
+			loadStyleSheet('./css/name_of_stylesheet.css')
+		}
+	</script> -->
 
 
 
